@@ -43,17 +43,7 @@ boxplot(degrees)
 
 %Betweenness centrality:
 bc =betweenness_bin(CIJ);figure(1);
+plot_measure(bc, 'betweenness centrality','betweenness centrality');
 
-subplot(3,1,1)
-    stem(bc)
-    xlabel('node index')
-    ylabel('betweenness centrality');
-    title('betweenness centrality');
-subplot(3,1,2)
-    histogram(bc);
-    xlabel('betweenness centrality');
-    ylabel('amount of nodes');
-subplot(3,1,3)
-    boxplot(bc)
-    ylabel('betweenness centrality');
+plot_measure(bc, 'betweenness centrality','betweenness centrality');
 
