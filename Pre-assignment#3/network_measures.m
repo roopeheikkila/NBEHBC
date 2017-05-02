@@ -47,3 +47,26 @@ plot_measure(bc, 'betweenness centrality','betweenness centrality');
 
 %Edge betweenness centrality
 ebc = edge_betweenness_bin(CIJ);
+figure();
+%create a heatmap where each point is a edge between two nodes
+imagesc(ebc);
+ylabel('node index');
+xlabel('node index');
+title('edge betweenness centrality');
+
+%Within-module degree z-score:
+%TODO
+%Participation and related coefficients:
+%TODO
+
+%Eigenvector centrality: 
+ec = eigenvector_centrality_und(CIJ);
+plot_measure(ec, 'eigenvector centrality', 'Eigenvector centrality');
+%%
+%PageRank centrality:
+prc = pagerank_centrality(CIJ,0.5);
+plot_measure(prc, 'pagerank centrality', 'Pagerank centrality');
+
+%%
+[x,y] = adjacency_plot_und(CIJ);
+plot(x,y)
