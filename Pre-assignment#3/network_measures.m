@@ -14,7 +14,7 @@ figure(1);
 subplot(3,1,1)
 stem(degrees)
 subplot(3,1,2)
-%set(gca, 'xtick',1:71,'xticklabel',Names);
+
 histogram(degrees)
 subplot(3,1,3)
 boxplot(degrees)
@@ -37,3 +37,23 @@ boxplot(degrees)
 
 % Matching index: 
 % matching_ind_und.m (BU networks); matching_ind.m (BD networks).
+
+
+%% Centrality
+
+%Betweenness centrality:
+bc =betweenness_bin(CIJ);figure(1);
+
+subplot(3,1,1)
+    stem(bc)
+    xlabel('node index')
+    ylabel('betweenness centrality');
+    title('betweenness centrality');
+subplot(3,1,2)
+    histogram(bc);
+    xlabel('betweenness centrality');
+    ylabel('amount of nodes');
+subplot(3,1,3)
+    boxplot(bc)
+    ylabel('betweenness centrality');
+
