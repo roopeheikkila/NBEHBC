@@ -1,6 +1,6 @@
 function [] = plot_measure(values, m_name, titlestr )
 %Plot a stemplot, histogram and boxplot of values
-figure();
+
 subplot(3,1,1)
     stem(values)
     xlabel('node index')

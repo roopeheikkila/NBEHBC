@@ -45,5 +45,4 @@ boxplot(degrees)
 bc =betweenness_bin(CIJ);figure(1);
 plot_measure(bc, 'betweenness centrality','betweenness centrality');
 
-plot_measure(bc, 'betweenness centrality','betweenness centrality');
 
