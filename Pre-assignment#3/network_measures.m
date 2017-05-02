@@ -9,7 +9,15 @@ load('macaque71.mat');
 
 % Degree:
 % degrees_und.m (BU, WU networks); degrees_dir.m (BD, WD networks).
-
+degrees = degrees_und(CIJ);
+figure(1);
+subplot(3,1,1)
+stem(degrees)
+subplot(3,1,2)
+%set(gca, 'xtick',1:71,'xticklabel',Names);
+histogram(degrees)
+subplot(3,1,3)
+boxplot(degrees)
 % 
 % Strength: 
 % strengths_und.m (WU networks); strengths_dir.m (WD networks).
