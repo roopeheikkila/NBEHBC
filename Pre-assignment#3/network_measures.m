@@ -153,7 +153,7 @@ disp(transitiv);
 % Contributor: MR.
 
 Eglob=efficiency_bin(CIJ);
-g_effi = ['global efficiency = ',num2str(Eglop)];
+g_effi = ['global efficiency = ',num2str(Eglob)];
 disp(g_effi);
 Eloc=efficiency_bin(CIJ,1);
 plot_measure(Eloc,'Local Efficiency','local efficiency');
@@ -241,6 +241,7 @@ out_out=['out-degree/out-degree correlation = ', num2str(r)];
 disp(out_out);
 r = assortativity_bin(CIJ,4);
 in_in=['in-degree/in-degree correlation = ', num2str(r)];
+disp(in_in);
 
 % Rich club coefficient: 
 % rich_club_bu.m (BU networks); rich_club_bd.m (BD networks).
